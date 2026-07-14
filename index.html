@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>VASTRA — Threads of the Himalaya</title>
+<meta name="description" content="VASTRA — handwoven Nepali garments. Daura Suruwal, Gunyu Cholo, Dhaka Topi, Pashmina. Woven in Kathmandu since 1974." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='26' fill='none' stroke='%23E9A83C' stroke-width='4'/%3E%3Ccircle cx='32' cy='32' r='12' fill='%23D93A32'/%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Rozha+One&family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Spline+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ═══════════ 3D SCENE ═══════════ -->
+<canvas id="scene" aria-hidden="true"></canvas>
+<div class="vignette" aria-hidden="true"></div>
+
+<!-- ═══════════ CHAPTER RAIL ═══════════ -->
+<nav class="rail" aria-hidden="true">
+  <span class="rail-line"></span>
+  <button class="rail-dot" data-target="hero"><i>०१</i><b>Weave</b></button>
+  <button class="rail-dot" data-target="story"><i>०२</i><b>Loom</b></button>
+  <button class="rail-dot" data-target="craft"><i>०३</i><b>Craft</b></button>
+  <button class="rail-dot" data-target="collection"><i>०४</i><b>Wear</b></button>
+</nav>
+
+<!-- ═══════════ HEADER ═══════════ -->
+<header class="nav" id="nav">
+  <a class="brand" href="#hero">
+    <span class="brand-mark" aria-hidden="true"></span>
+    VASTRA<em>वस्त्र</em>
+  </a>
+  <nav class="nav-links">
+    <a href="#story">Story</a>
+    <a href="#craft">Craft</a>
+    <a href="#collection">Collection</a>
+  </nav>
+  <button class="cart-btn" id="cartBtn" aria-label="Open cart">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+      <path d="M4 7h16l-1.4 12.2A2 2 0 0 1 16.6 21H7.4a2 2 0 0 1-2-1.8L4 7Z"/>
+      <path d="M8.5 10V6a3.5 3.5 0 0 1 7 0v4"/>
+    </svg>
+    <span class="cart-count" id="cartCount">0</span>
+  </button>
+</header>
+
+<main>
+
+<!-- ═══════════ HERO ═══════════ -->
+<section class="hero" id="hero">
+  <p class="hero-kicker">काठमाडौं &nbsp;·&nbsp; Handwoven since 1974</p>
+  <h1 class="hero-title">
+    <span class="hero-dev" aria-hidden="true">वस्त्र</span>
+    <span class="hero-latin">VASTRA</span>
+  </h1>
+  <p class="hero-sub">Threads of the Himalaya. Every garment leaves a Kathmandu loom
+     before it ever touches a shelf — <em>dhaka</em>, pashmina, and mountain wool,
+     woven the slow way.</p>
+  <div class="hero-cta">
+    <button class="btn btn-gold" data-scroll="collection">Explore the Collection</button>
+    <button class="btn btn-ghost" data-scroll="story">Our Story</button>
+  </div>
+  <div class="scroll-hint" aria-hidden="true"><span>Scroll</span><i></i></div>
+</section>
+
+<!-- ═══════════ MARQUEE ═══════════ -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track" id="marqueeTrack">
+    <span>हातले बुनेको</span><b>✦</b><span>Handwoven in Kathmandu</span><b>✦</b>
+    <span>दौरा सुरुवाल</span><b>✦</b><span>Dhaka Heritage</span><b>✦</b>
+    <span>गुन्यू चोलो</span><b>✦</b><span>Pashmina of Mustang</span><b>✦</b>
+    <span>२१४ बुनकर परिवार</span><b>✦</b><span>214 Weaver Families</span><b>✦</b>
+  </div>
+</div>
+
+<!-- ═══════════ STORY ═══════════ -->
+<section class="story" id="story">
+  <div class="story-grid">
+    <div class="story-left rv">
+      <p class="eyebrow">०२ — The Loom</p>
+      <h2>Fifty years at the <em>loom</em>,<br/>one thread at a time.</h2>
+    </div>
+    <div class="story-right">
+      <p class="rv" style="--i:1">VASTRA began in 1974 as a single handloom in a courtyard in Patan.
+        Today we work with weaving families across Palpa, Terhathum and the Kathmandu
+        valley — the historic homes of <em>dhaka</em> cloth — and herders in Mustang
+        whose <em>chyangra</em> goats give the world's finest pashmina.</p>
+      <p class="rv" style="--i:2">Nothing here is printed. The geometry you see in every topi and
+        cholo is counted into the cloth, pick by pick, by hands that learned the
+        pattern from their mothers. A single daura can carry forty thousand
+        intersections of thread.</p>
+      <div class="stats rv" style="--i:3">
+        <div class="stat"><b>214</b><span>weaver families</span></div>
+        <div class="stat"><b>46</b><span>working handlooms</span></div>
+        <div class="stat"><b>१९७४</b><span>first thread</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ CRAFT ═══════════ -->
+<section class="craft" id="craft">
+  <p class="eyebrow rv">०३ — The Craft</p>
+  <h2 class="rv" style="--i:1">From <em>ridge-line</em> to hem</h2>
+  <div class="craft-grid">
+    <article class="craft-card rv" style="--i:1">
+      <span class="craft-no">क</span>
+      <h3>Shear &amp; Spin</h3>
+      <p>High-pasture wool and chyangra down, combed by hand each spring above
+         4,000&nbsp;metres, spun on drop spindles on the walk back down.</p>
+    </article>
+    <article class="craft-card rv" style="--i:2">
+      <span class="craft-no">ख</span>
+      <h3>Root &amp; Dye</h3>
+      <p>Madder red, walnut black, true indigo. Our dye house uses river water,
+         mountain lichen and zero synthetic fixative.</p>
+    </article>
+    <article class="craft-card rv" style="--i:3">
+      <span class="craft-no">ग</span>
+      <h3>Count &amp; Weave</h3>
+      <p>Dhaka geometry is never drawn — it is counted from memory. Two centimetres
+         of pattern an hour. We refuse to hurry it.</p>
+    </article>
+  </div>
+</section>
+
+<!-- ═══════════ COLLECTION ═══════════ -->
+<section class="collection" id="collection">
+  <div class="collection-head">
+    <p class="eyebrow rv">०४ — The Collection</p>
+    <h2 class="rv" style="--i:1">Wear the <em>weave</em></h2>
+    <p class="collection-sub rv" style="--i:2">Every piece is cut to order. Choose a size,
+       add it to your bag — this shop is a full checkout <b>simulation</b>, no real
+       orders are placed.</p>
+  </div>
+  <div class="filters rv" id="filters" role="tablist" aria-label="Filter garments">
+    <button class="chip active" data-filter="all">All</button>
+    <button class="chip" data-filter="men">Men</button>
+    <button class="chip" data-filter="women">Women</button>
+    <button class="chip" data-filter="heritage">Heritage</button>
+    <button class="chip" data-filter="accessories">Accessories</button>
+  </div>
+  <div class="grid" id="productGrid"></div>
+</section>
+
+<!-- ═══════════ FOOTER ═══════════ -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="brand-mark big" aria-hidden="true"></span>
+      <h3>VASTRA <em>वस्त्र</em></h3>
+      <p>Threads of the Himalaya — a demonstration storefront.
+         All checkout flows are simulated; no payment is processed
+         and no order ships.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Atelier</h4>
+      <p>Swotha Square, Patan<br/>Lalitpur 44700, Nepal</p>
+    </div>
+    <div class="footer-col">
+      <h4>Hours</h4>
+      <p>आइतबार – शुक्रबार<br/>10:00 – 18:00 NPT</p>
+    </div>
+    <div class="footer-col">
+      <h4>Elsewhere</h4>
+      <p><a href="#hero">Instagram</a><br/><a href="#hero">Journal</a></p>
+    </div>
+  </div>
+  <p class="footer-fine">© 2026 VASTRA · Woven with patience in Kathmandu · <span>जय नेपाल</span></p>
+</footer>
+
+</main>
+
+<!-- ═══════════ PRODUCT MODAL ═══════════ -->
+<div class="overlay" id="modalOverlay" hidden></div>
+<div class="pmodal" id="pmodal" role="dialog" aria-modal="true" aria-label="Product details" hidden>
+  <button class="x" id="pmodalClose" aria-label="Close">✕</button>
+  <div class="pmodal-media" id="pmodalMedia"></div>
+  <div class="pmodal-info">
+    <p class="pmodal-cat" id="pmodalCat"></p>
+    <h3 id="pmodalName"></h3>
+    <p class="pmodal-np" id="pmodalNp"></p>
+    <p class="pmodal-price" id="pmodalPrice"></p>
+    <p class="pmodal-desc" id="pmodalDesc"></p>
+    <ul class="pmodal-notes" id="pmodalNotes"></ul>
+    <div class="pmodal-row">
+      <span class="lbl">Size</span>
+      <div class="sizes" id="pmodalSizes"></div>
+    </div>
+    <div class="pmodal-row">
+      <span class="lbl">Quantity</span>
+      <div class="qty">
+        <button id="qtyMinus" aria-label="Decrease quantity">−</button>
+        <b id="qtyVal">1</b>
+        <button id="qtyPlus" aria-label="Increase quantity">+</button>
+      </div>
+    </div>
+    <button class="btn btn-gold wide" id="pmodalAdd">Add to Bag — <span id="pmodalTotal"></span></button>
+  </div>
+</div>
+
+<!-- ═══════════ CART DRAWER ═══════════ -->
+<div class="overlay" id="drawerOverlay" hidden></div>
+<aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Shopping bag" hidden>
+  <header class="drawer-head">
+    <h3>Your Bag <span id="drawerCount"></span></h3>
+    <button class="x" id="drawerClose" aria-label="Close bag">✕</button>
+  </header>
+  <div class="drawer-items" id="drawerItems"></div>
+  <footer class="drawer-foot" id="drawerFoot">
+    <div class="tot-row"><span>Subtotal</span><b id="subTotal"></b></div>
+    <div class="tot-row"><span>Shipping</span><b id="shipTotal"></b></div>
+    <div class="tot-row grand"><span>Total</span><b id="grandTotal"></b></div>
+    <p class="free-ship" id="freeShip"></p>
+    <button class="btn btn-gold wide" id="checkoutBtn">Checkout</button>
+  </footer>
+  <div class="drawer-empty" id="drawerEmpty">
+    <span aria-hidden="true">🧵</span>
+    <p>Your bag is empty.<br/>The looms are waiting.</p>
+    <button class="btn btn-ghost" id="emptyShopBtn">Browse the collection</button>
+  </div>
+</aside>
+
+<!-- ═══════════ CHECKOUT MODAL ═══════════ -->
+<div class="overlay dark" id="checkoutOverlay" hidden></div>
+<div class="checkout" id="checkout" role="dialog" aria-modal="true" aria-label="Checkout" hidden>
+  <button class="x" id="checkoutClose" aria-label="Close checkout">✕</button>
+
+  <div class="steps" id="steps">
+    <span class="step active" data-step="1"><i>1</i>Delivery</span>
+    <span class="step" data-step="2"><i>2</i>Payment</span>
+    <span class="step" data-step="3"><i>3</i>Review</span>
+  </div>
+
+  <!-- step 1 -->
+  <section class="cstep" id="step1">
+    <h3>Where should the weave travel?</h3>
+    <div class="fields">
+      <label>Full name<input id="fName" type="text" placeholder="Sita Gurung" required /></label>
+      <label>Phone<input id="fPhone" type="tel" placeholder="98XXXXXXXX" required /></label>
+      <label class="span2">Street address<input id="fAddr" type="text" placeholder="Swotha Square, Patan" required /></label>
+      <label>City<input id="fCity" type="text" placeholder="Lalitpur" required /></label>
+      <label>Province
+        <select id="fProv">
+          <option>Bagmati</option><option>Gandaki</option><option>Koshi</option>
+          <option>Lumbini</option><option>Madhesh</option><option>Karnali</option>
+          <option>Sudurpashchim</option>
+        </select>
+      </label>
+    </div>
+    <button class="btn btn-gold wide" id="toStep2">Continue to Payment</button>
+  </section>
+
+  <!-- step 2 -->
+  <section class="cstep" id="step2" hidden>
+    <h3>How would you like to pay?</h3>
+    <div class="paylist" id="paylist">
+      <label class="pay"><input type="radio" name="pay" value="Card" checked />
+        <span class="pay-name">Card</span><span class="pay-note">Visa · Mastercard</span></label>
+      <label class="pay"><input type="radio" name="pay" value="eSewa" />
+        <span class="pay-name">eSewa</span><span class="pay-note">Wallet redirect (simulated)</span></label>
+      <label class="pay"><input type="radio" name="pay" value="Khalti" />
+        <span class="pay-name">Khalti</span><span class="pay-note">Wallet redirect (simulated)</span></label>
+      <label class="pay"><input type="radio" name="pay" value="Cash on Delivery" />
+        <span class="pay-name">Cash on Delivery</span><span class="pay-note">Kathmandu valley only</span></label>
+    </div>
+    <div class="fields cardfields" id="cardFields">
+      <label class="span2">Card number<input id="fCard" type="text" inputmode="numeric" placeholder="4242 4242 4242 4242" maxlength="19" /></label>
+      <label>Expiry<input id="fExp" type="text" placeholder="MM / YY" maxlength="7" /></label>
+      <label>CVC<input id="fCvc" type="text" inputmode="numeric" placeholder="123" maxlength="4" /></label>
+    </div>
+    <div class="btnrow">
+      <button class="btn btn-ghost" id="backTo1">Back</button>
+      <button class="btn btn-gold" id="toStep3">Review Order</button>
+    </div>
+  </section>
+
+  <!-- step 3 -->
+  <section class="cstep" id="step3" hidden>
+    <h3>One last look</h3>
+    <div class="review" id="reviewBox"></div>
+    <div class="btnrow">
+      <button class="btn btn-ghost" id="backTo2">Back</button>
+      <button class="btn btn-gold" id="placeOrder">Place Order</button>
+    </div>
+  </section>
+
+  <!-- processing -->
+  <section class="cstep centered" id="stepProcessing" hidden>
+    <span class="spinner" aria-hidden="true"></span>
+    <h3>Threading your order…</h3>
+    <p class="muted">Talking to the loom (simulation)</p>
+  </section>
+
+  <!-- success -->
+  <section class="cstep centered" id="stepSuccess" hidden>
+    <div class="petals" id="petals" aria-hidden="true"></div>
+    <span class="success-ring" aria-hidden="true">✓</span>
+    <h3>धन्यवाद — Thank you!</h3>
+    <p class="order-no">Order <b id="orderNo"></b> is confirmed.</p>
+    <p class="muted" id="successSummary"></p>
+    <p class="muted small">This was a simulation. Nothing was charged and nothing will ship —
+       except, perhaps, your curiosity about dhaka cloth.</p>
+    <button class="btn btn-gold" id="successClose">Continue Browsing</button>
+  </section>
+</div>
+
+<!-- ═══════════ TOAST ═══════════ -->
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
